@@ -17,7 +17,7 @@ struct Info {
     string Phone;
 };
 
-void Read_Info(Info& Person , Length){
+void Read_Info(Info& Person ){
     
     cout << "**************************\n";
     cout << "Enter First Name: ";
@@ -38,7 +38,7 @@ void Read_Info(Info& Person , Length){
 
 void preint_Info(Info Person){
      
-    cout << "\nPerson Information:\n" << Length;
+    cout << "\nPerson Information:\n" << endl;
     
     cout << "First Name : " << Person.FristName << endl;
     cout << "Last Name  : " << Person.LastName << endl;
@@ -57,7 +57,7 @@ void  ReadPerson(Info Person[100] ,int&  Length){
     for (int i = 0 ; i <= Length -1; i++){
     cout << "Person ["<< ++i <<"] \n" ;    
     Read_Info(Person[i]);
-    //Read_Info(Person[i]);
+    Read_Info(Person[i]);
     
     }
 }  ; 
@@ -65,23 +65,22 @@ void  ReadPerson(Info Person[100] ,int&  Length){
 
 void bet(Info Person[100] , int Length){
     
-       // preint_Info(Person[0]);
-       // preint_Info(Person[1]);
-    ///cout << "how many Person do wont shose 1 to 100 \n";
-    //cin >> Length;
+        preint_Info(Person[0]);
+        preint_Info(Person[1]);
+    cout << "how many Person do wont shose 1 to 100 \n";
+    cin >> Length;
     
     for (int i = 0 ; i <= Length -1; i++){
     cout << "Person ["<< i + 1 <<"] \n" ;    
     preint_Info(Person[i]);
-    //preint_Info(Person[i]);
-}
+    preint_Info(Person[i]);
+};
+}      
         
-        
     
     
     
-int main()
-{
+int main(){
    Info Person[100];
    int Length = 1;
    ReadPerson(Person , Length);
