@@ -1,0 +1,36 @@
+#include <iostream>
+using namespace std;
+
+enum enPassfail{Pass = 1, Fail =2};
+
+int Readme(){
+    int Numb;
+    
+    cout << "please enter the mark :\n";
+    cin >> Numb;
+    return Numb;
+};
+
+enPassfail checkMark(int Mark){
+    if(Mark >= 50)
+    return enPassfail::Pass;
+    else
+    return enPassfail::Fail;
+};
+
+void printMark(int Nau){
+    if(checkMark(Nau) == enPassfail::Pass)
+    cout << "\n You'r passed \n";
+    else
+    cout << "\n You'r Faild \n";
+    
+}
+
+
+
+int main()
+{
+    printMark(Readme());
+  
+    return 0;
+}
